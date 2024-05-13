@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">BookFavorites</string>
+    <!--  Navigation bar  -->
+    <string name="main_home">Home</string>
+    <string name="main_bookshelf">Bookshelf</string>
+    <string name="main_info">Info</string>
 </resources>
