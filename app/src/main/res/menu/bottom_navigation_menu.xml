@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:enabled="true"
+        android:icon="@drawable/ic_navigation_home"
+        android:title="@string/main_home" />
+    <item
+        android:id="@+id/navigation_bookshelf"
+        android:enabled="true"
+        android:icon="@drawable/ic_navigation_bookshelf"
+        android:title="@string/main_bookshelf" />
+    <item
+        android:id="@+id/navigation_info"
+        android:enabled="true"
+        android:icon="@drawable/ic_navigation_info"
+        android:title="@string/main_info" />
+</menu>
