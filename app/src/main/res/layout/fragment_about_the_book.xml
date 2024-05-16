@@ -20,12 +20,14 @@
             <com.google.android.material.appbar.MaterialToolbar
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
+                android:paddingEnd="@dimen/padding_app_bar_medium"
                 app:layout_collapseMode="pin"
                 app:menu="@menu/about_the_book_app_bar_menu"
                 app:navigationContentDescription="@string/all_back_navigation_cd"
                 app:navigationIcon="@drawable/ic_back"
                 app:title="@string/about_the_book_app_bar_title"
-                app:titleCentered="true" />
+                app:titleCentered="true"
+                tools:ignore="RtlSymmetry" />
 
             <Toolbar
                 android:layout_width="match_parent"
@@ -33,7 +35,7 @@
                 android:layout_marginTop="?attr/actionBarSize"
                 android:buttonGravity="bottom"
                 android:navigationIcon="@drawable/ic_navigation_bookshelf_filled"
-                android:padding="16dp"
+                android:padding="@dimen/padding_app_bar_large"
                 android:title="@string/about_the_book_group_label"
                 android:titleTextAppearance="@style/TextAppearance.App.Toolbar.Label"
                 app:layout_collapseMode="parallax"
@@ -42,14 +44,14 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/til_group"
-                    android:layout_width="136.5dp"
+                    android:layout_width="@dimen/width_text_field_medium"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/tiet_group"
                         android:layout_width="match_parent"
-                        android:layout_height="56.5dp"
+                        android:layout_height="@dimen/height_text_field_large"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.App.BodyLarge" />
                 </com.google.android.material.textfield.TextInputLayout>
