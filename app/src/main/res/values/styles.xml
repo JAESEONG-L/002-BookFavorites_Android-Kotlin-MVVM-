@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <!--  Base Text Appearance Style  -->
     <style name="TextAppearance.App" parent="TextAppearance.AppCompat" />
 
+        <!--  Text Appearance  -->
     <style name="TextAppearance.App.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
         <item name="android:textSize">18sp</item>
     </style>
 
+        <!--  Widget Text Appearance  -->
     <style name="TextAppearance.App.Toolbar" />
 
     <style name="TextAppearance.App.Toolbar.Label" parent="TextAppearance.Material3.ActionBar.Title">
