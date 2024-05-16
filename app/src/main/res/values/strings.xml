@@ -1,7 +1,17 @@
 <resources>
     <string name="app_name">BookFavorites</string>
+    
+    <string name="all_back_navigation_cd">Back</string>
     <!--  Navigation bar  -->
     <string name="main_home">Home</string>
     <string name="main_bookshelf">Bookshelf</string>
     <string name="main_info">Info</string>
+    <!--  About The Book fragment  -->
+        <!--  Top app bar  -->
+    <string name="about_the_book_app_bar_title">ABOUT</string>
+    <string name="about_the_book_favorite_item_title">Favorite</string>
+    <string name="about_the_book_favorite_item_cd">Favorite</string>
+    <string name="about_the_book_note_item_title">Note</string>
+    <string name="about_the_book_note_item_cd">Note</string>
+    <string name="about_the_book_group_label">Group:</string>
 </resources>

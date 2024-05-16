@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.App" parent="TextAppearance.AppCompat" />
+
+    <style name="TextAppearance.App.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextAppearance.App.Toolbar" />
+
+    <style name="TextAppearance.App.Toolbar.Label" parent="TextAppearance.Material3.ActionBar.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

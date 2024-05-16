@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/favorite"
+        android:contentDescription="@string/about_the_book_favorite_item_cd"
+        android:icon="@drawable/selector_favorite"
+        android:title="@string/about_the_book_favorite_item_title"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/note"
+        android:contentDescription="@string/about_the_book_note_item_cd"
+        android:icon="@drawable/ic_note"
+        android:title="@string/about_the_book_note_item_title"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+</menu>
