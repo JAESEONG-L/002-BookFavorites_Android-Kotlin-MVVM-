@@ -5,14 +5,14 @@
 
         <!--  Text Appearance  -->
     <style name="TextAppearance.App.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">@dimen/textsize_large</item>
     </style>
 
         <!--  Widget Text Appearance  -->
     <style name="TextAppearance.App.Toolbar" />
 
     <style name="TextAppearance.App.Toolbar.Label" parent="TextAppearance.Material3.ActionBar.Title">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">@dimen/textsize_large</item>
         <item name="android:textStyle">bold</item>
     </style>
 </resources>
