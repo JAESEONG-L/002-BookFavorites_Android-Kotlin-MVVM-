@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--  Layout related dimensions.  -->
+        <!--  Margins  -->
+    <dimen name="margin_larger">64dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_smaller">4dp</dimen>
+    <dimen name="margin_smallest">2dp</dimen>
+        <!--  Paddings  -->
+    <dimen name="padding_medium">32dp</dimen>
+    <dimen name="padding_small">16dp</dimen>
         <!--  App bar  -->
     <dimen name="padding_app_bar_large">16dp</dimen>
     <dimen name="padding_app_bar_medium">4dp</dimen>
@@ -13,5 +23,6 @@
     <dimen name="size_drawable_small">24.5dp</dimen>
 
     <!--  Text related dimensions.  -->
+    <dimen name="textsize_larger">20sp</dimen>
     <dimen name="textsize_large">18sp</dimen>
 </resources>
