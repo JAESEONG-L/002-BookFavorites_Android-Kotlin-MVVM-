@@ -14,4 +14,6 @@
     <string name="about_the_book_note_item_title">Note</string>
     <string name="about_the_book_note_item_cd">Note</string>
     <string name="about_the_book_group_label">Group:</string>
+        <!--  Title  -->
+    <string name="about_the_book_iv_title_image_cd">title image</string>
 </resources>

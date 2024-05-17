@@ -4,6 +4,10 @@
     <style name="TextAppearance.App" parent="TextAppearance.AppCompat" />
 
         <!--  Text Appearance  -->
+    <style name="TextAppearance.App.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">@dimen/textsize_larger</item>
+        <item name="android:textStyle">bold</item>
+    </style>
     <style name="TextAppearance.App.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
         <item name="android:textSize">@dimen/textsize_large</item>
     </style>

@@ -62,5 +62,91 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        android:padding="@dimen/padding_small"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/padding_medium">
+
+            <!--  Background view.  -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_title_background"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/margin_large"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="@dimen/corner_radius_card_view_small"
+                app:layout_constraintBottom_toBottomOf="@id/tv_isbn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="56dp"
+                android:layout_marginTop="36dp"
+                android:elevation="@dimen/cardview_default_elevation"
+                android:textAppearance="@style/TextAppearance.App.TitleLarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_author"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="56dp"
+                android:layout_marginTop="@dimen/margin_smallest"
+                android:elevation="@dimen/cardview_default_elevation"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/gray_800"
+                android:textStyle="italic|bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+            <ImageView
+                android:id="@+id/iv_title_image"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="80dp"
+                android:layout_marginTop="@dimen/margin_large"
+                android:contentDescription="@string/about_the_book_iv_title_image_cd"
+                android:elevation="@dimen/cardview_default_elevation"
+                app:layout_constraintDimensionRatio="W,5:4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_author" />
+
+            <TextView
+                android:id="@+id/tv_publisher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:elevation="@dimen/cardview_default_elevation"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textStyle="bold"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="@id/cv_title_background"
+                app:layout_constraintStart_toStartOf="@id/cv_title_background"
+                app:layout_constraintTop_toBottomOf="@id/iv_title_image" />
+
+            <TextView
+                android:id="@+id/tv_isbn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_large"
+                android:elevation="@dimen/cardview_default_elevation"
+                android:paddingBottom="@dimen/padding_medium"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="@id/cv_title_background"
+                app:layout_constraintStart_toStartOf="@id/cv_title_background"
+                app:layout_constraintTop_toBottomOf="@id/tv_publisher" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

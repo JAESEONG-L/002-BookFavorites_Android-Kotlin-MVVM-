@@ -18,6 +18,8 @@
         <!--  Text field  -->
     <dimen name="width_text_field_medium">136.5dp</dimen>
     <dimen name="height_text_field_large">56.5dp</dimen>
+        <!--  Card view  -->
+    <dimen name="corner_radius_card_view_small">4dp</dimen>
 
     <!--  Drawable related dimensions.  -->
     <dimen name="size_drawable_small">24.5dp</dimen>
