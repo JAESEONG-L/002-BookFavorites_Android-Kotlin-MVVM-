@@ -20,14 +20,18 @@
     <dimen name="width_text_field_medium">136.5dp</dimen>
     <dimen name="height_text_field_large">56.5dp</dimen>
     <dimen name="height_text_field_medium">51.1dp</dimen>
+    <dimen name="padding_text_field_large">14.5dp</dimen>
     <dimen name="padding_text_field_medium">10dp</dimen>
         <!--  Card view  -->
+    <dimen name="corner_radius_card_view_medium">10dp</dimen>
     <dimen name="corner_radius_card_view_small">4dp</dimen>
 
     <!--  Drawable related dimensions.  -->
     <dimen name="size_drawable_small">24.5dp</dimen>
 
     <!--  Text related dimensions.  -->
+    <dimen name="lineheight_medium">21.5sp</dimen>
     <dimen name="textsize_larger">20sp</dimen>
     <dimen name="textsize_large">18sp</dimen>
+    <dimen name="textsize_medium">14sp</dimen>
 </resources>

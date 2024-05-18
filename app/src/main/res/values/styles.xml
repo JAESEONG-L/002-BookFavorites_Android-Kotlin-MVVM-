@@ -11,6 +11,10 @@
     <style name="TextAppearance.App.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
         <item name="android:textSize">@dimen/textsize_large</item>
     </style>
+    <style name="TextAppearance.App.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:lineHeight">@dimen/lineheight_medium</item>
+        <item name="lineHeight">@dimen/lineheight_medium</item>
+    </style>
 
         <!--  Widget Text Appearance  -->
     <style name="TextAppearance.App.Toolbar" />
