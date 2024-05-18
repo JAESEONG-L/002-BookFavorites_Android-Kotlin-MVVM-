@@ -18,4 +18,5 @@
     <string name="about_the_book_iv_title_image_cd">title image</string>
         <!--  Body  -->
     <string name="about_the_book_predate_label">(Pre) Date</string>
+    <string name="about_the_book_table_of_contents_hint">TABLE OF CONTENTS</string>
 </resources>

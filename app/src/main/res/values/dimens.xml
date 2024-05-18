@@ -16,8 +16,11 @@
     <dimen name="padding_app_bar_medium">4dp</dimen>
     <dimen name="padding_app_bar_small">2dp</dimen>
         <!--  Text field  -->
+    <dimen name="width_text_field_large">299dp</dimen>
     <dimen name="width_text_field_medium">136.5dp</dimen>
     <dimen name="height_text_field_large">56.5dp</dimen>
+    <dimen name="height_text_field_medium">51.1dp</dimen>
+    <dimen name="padding_text_field_medium">10dp</dimen>
         <!--  Card view  -->
     <dimen name="corner_radius_card_view_small">4dp</dimen>
 

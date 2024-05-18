@@ -44,13 +44,13 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/til_group"
-                    android:layout_width="@dimen/width_text_field_medium"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/tiet_group"
-                        android:layout_width="match_parent"
+                        android:layout_width="@dimen/width_text_field_medium"
                         android:layout_height="@dimen/height_text_field_large"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.App.BodyLarge" />
@@ -68,7 +68,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="@dimen/padding_medium">
+            android:paddingBottom="132dp">
 
             <!--  Background view.  -->
             <androidx.cardview.widget.CardView
@@ -169,8 +169,25 @@
                 app:layout_constraintBottom_toBottomOf="@id/c_predate_label"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/c_predate_label"
-                app:layout_constraintTop_toTopOf="@id/c_predate_label"
-                tools:text="05/17/2024" />
+                app:layout_constraintTop_toTopOf="@id/c_predate_label" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_table_of_contents"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_smaller"
+                android:hint="@string/about_the_book_table_of_contents_hint"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/c_predate_label">
+
+                <AutoCompleteTextView
+                    android:id="@+id/actv_table_of_contents"
+                    android:layout_width="@dimen/width_text_field_large"
+                    android:layout_height="@dimen/height_text_field_medium"
+                    android:inputType="none"
+                    tools:ignore="LabelFor" />
+            </com.google.android.material.textfield.TextInputLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
