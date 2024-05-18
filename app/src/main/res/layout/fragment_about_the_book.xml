@@ -147,6 +147,30 @@
                 app:layout_constraintEnd_toEndOf="@id/cv_title_background"
                 app:layout_constraintStart_toStartOf="@id/cv_title_background"
                 app:layout_constraintTop_toBottomOf="@id/tv_publisher" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/c_predate_label"
+                style="@style/Widget.Material3.Chip.Assist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_smallest"
+                android:layout_marginTop="@dimen/margin_large"
+                android:clickable="false"
+                android:text="@string/about_the_book_predate_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_isbn" />
+
+            <TextView
+                android:id="@+id/tv_predate"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_small"
+                android:gravity="center_vertical"
+                app:layout_constraintBottom_toBottomOf="@id/c_predate_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/c_predate_label"
+                app:layout_constraintTop_toTopOf="@id/c_predate_label"
+                tools:text="05/17/2024" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
