@@ -38,7 +38,7 @@
                 android:padding="@dimen/padding_app_bar_large"
                 android:visibility="gone"
                 app:layout_collapseMode="parallax"
-                app:layout_collapseParallaxMultiplier="0.975"
+                app:layout_collapseParallaxMultiplier="0.89"
                 app:navigationIcon="@drawable/ic_navigation_bookshelf_filled"
                 app:title="@string/about_the_book_group_label"
                 app:titleTextAppearance="@style/TextAppearance.App.Toolbar.Label">
