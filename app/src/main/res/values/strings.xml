@@ -10,13 +10,19 @@
         <!--  Top app bar  -->
     <string name="about_the_book_app_bar_title">ABOUT</string>
     <string name="about_the_book_favorite_item_title">Favorite</string>
-    <string name="about_the_book_favorite_item_cd">Favorite</string>
+    <string name="about_the_book_favorite_item_cd">Favorite action.</string>
     <string name="about_the_book_note_item_title">Note</string>
-    <string name="about_the_book_note_item_cd">Note</string>
+    <string name="about_the_book_note_item_cd">Note action.</string>
     <string name="about_the_book_group_label">Group:</string>
         <!--  Title  -->
-    <string name="about_the_book_iv_title_image_cd">title image</string>
+    <string name="about_the_book_iv_title_image_cd">This is a title image of the book.</string>
         <!--  Body  -->
     <string name="about_the_book_predate_label">(Pre) Date</string>
     <string name="about_the_book_table_of_contents_hint">TABLE OF CONTENTS</string>
+    <string name="about_the_book_iv_note_preview_cd">You can create a new note.</string>
+    <string name="about_the_book_favorites_label">Favorites:</string>
+    <string name="about_the_book_edition_label">Edition:</string>
+    <string name="about_the_book_btn_add_to_reading_label">Add To Reading</string>
+    <string name="about_the_book_btn_add_to_favorites_label">Add To Favorites</string>
+    <string name="about_the_book_btn_copy_isbn_label">Copy ISBN</string>
 </resources>

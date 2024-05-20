@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--  About The Book fragment  -->
+    <style name="Widget.App.CardView.NotePreview" parent="Widget.Material3.CardView.Elevated">
+        <item name="android:layout_marginTop">@dimen/margin_larger</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="cardCornerRadius">0dp</item>
+    </style>
+
+    <style name="Widget.App.TextView" parent="Widget.AppCompat.TextView" />
+    <style name="Widget.App.TextView.NotePreview" parent="TextAppearance.App.BodySmall">
+        <item name="android:paddingHorizontal">@dimen/padding_text_field_largest</item>
+        <item name="android:elevation">@dimen/default_elevation_material_card_view</item>
+    </style>
+
+    <style name="Widget.App.Button" parent="Widget.Material3.Button">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.App.Widget.Button</item>
+    </style>
+    <style name="Widget.App.Button.OutlinedButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.App.Widget.Button</item>
+    </style>
+    <style name="Widget.App.Button.TonalButton" parent="Widget.Material3.Button.TonalButton">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.App.Widget.Button</item>
+    </style>
+
+
     <!--  Base Text Appearance Style  -->
     <style name="TextAppearance.App" parent="TextAppearance.AppCompat" />
 
@@ -14,6 +45,18 @@
     <style name="TextAppearance.App.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
         <item name="android:lineHeight">@dimen/lineheight_medium</item>
         <item name="lineHeight">@dimen/lineheight_medium</item>
+    </style>
+    <style name="TextAppearance.App.BodyMedium.Item">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/gray_800</item>
+    </style>
+    <style name="TextAppearance.App.BodySmall">
+        <item name="android:lineHeight">@dimen/lineheight_small</item>
+        <item name="lineHeight">@dimen/lineheight_small</item>
+        <item name="android:textSize">@dimen/textsize_small</item>
+    </style>
+    <style name="TextAppearance.App.Widget.Button" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:textSize">17sp</item>
     </style>
 
         <!--  Widget Text Appearance  -->
