@@ -394,6 +394,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_medium"
                 android:layout_marginTop="@dimen/margin_small"
+                android:ellipsize="middle"
+                android:maxLines="1"
                 android:text="@string/about_the_book_favorites_label"
                 app:layout_constrainedWidth="true"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -410,7 +412,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_favorites" />
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_edition"
                 style="@style/TextAppearance.App.BodyMedium.Item"
                 android:layout_width="0dp"
