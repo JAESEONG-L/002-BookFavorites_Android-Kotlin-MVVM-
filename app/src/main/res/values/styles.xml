@@ -9,6 +9,12 @@
     </style>
 
     <style name="Widget.App.TextView" parent="Widget.AppCompat.TextView" />
+    <style name="Widget.App.TextView.SearchBarTitle" parent="TextAppearance.App.BodyLarge">
+        <item name="android:paddingBottom">@dimen/padding_small</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/gray_bg</item>
+    </style>
     <style name="Widget.App.TextView.NotePreview" parent="TextAppearance.App.BodySmall">
         <item name="android:paddingHorizontal">@dimen/padding_text_field_largest</item>
         <item name="android:elevation">@dimen/default_elevation_material_card_view</item>

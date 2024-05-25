@@ -5,6 +5,9 @@
     <color name="lumber">#3F2305</color>
     <color name="isbn">#272343</color>
 
+    <!--  Baseline  -->
+    <color name="surface">#FEF7FF</color>
+
     <color name="gray_bg">#E6E0E9</color>
     <color name="gray_800">#333333</color>
 </resources>

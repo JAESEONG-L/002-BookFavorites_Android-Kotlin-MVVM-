@@ -1,6 +1,380 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment" />
+    tools:context=".ui.home.HomeFragment">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/isbn"
+        app:layout_constraintBottom_toBottomOf="@id/cl_search"
+        app:layout_constraintEnd_toStartOf="@id/cl_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_search"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/size_large"
+        android:background="@color/surface"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.846154">
+        <!--  Toggle between android:layout_height="@dimen/height_app_bar_large".  -->
+
+        <View
+            android:id="@+id/v_search_upper_background_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/fl_search_text_field"
+            app:layout_constraintEnd_toStartOf="@id/v_search_upper_background_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="3" />
+
+        <TextView
+            style="@style/Widget.App.TextView.SearchBarTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="I"
+            app:layout_constraintBottom_toBottomOf="@id/v_search_upper_background_1"
+            app:layout_constraintEnd_toEndOf="@id/v_search_upper_background_1"
+            app:layout_constraintStart_toStartOf="@id/v_search_upper_background_1"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:id="@+id/v_search_upper_background_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/isbn"
+            app:layout_constraintBottom_toTopOf="@id/fl_search_text_field"
+            app:layout_constraintEnd_toStartOf="@id/v_search_upper_background_3"
+            app:layout_constraintStart_toEndOf="@id/v_search_upper_background_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/Widget.App.TextView.SearchBarTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="S"
+            app:layout_constraintBottom_toBottomOf="@id/v_search_upper_background_2"
+            app:layout_constraintEnd_toEndOf="@id/v_search_upper_background_2"
+            app:layout_constraintStart_toStartOf="@id/v_search_upper_background_2"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:id="@+id/v_search_upper_background_3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/fl_search_text_field"
+            app:layout_constraintEnd_toStartOf="@id/v_search_upper_background_4"
+            app:layout_constraintStart_toEndOf="@id/v_search_upper_background_2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/Widget.App.TextView.SearchBarTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="B"
+            app:layout_constraintBottom_toBottomOf="@id/v_search_upper_background_3"
+            app:layout_constraintEnd_toEndOf="@id/v_search_upper_background_3"
+            app:layout_constraintStart_toStartOf="@id/v_search_upper_background_3"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:id="@+id/v_search_upper_background_4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/isbn"
+            app:layout_constraintBottom_toTopOf="@id/fl_search_text_field"
+            app:layout_constraintEnd_toStartOf="@id/v_search_upper_background_5"
+            app:layout_constraintStart_toEndOf="@id/v_search_upper_background_3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/Widget.App.TextView.SearchBarTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="N"
+            app:layout_constraintBottom_toBottomOf="@id/v_search_upper_background_4"
+            app:layout_constraintEnd_toEndOf="@id/v_search_upper_background_4"
+            app:layout_constraintStart_toStartOf="@id/v_search_upper_background_4"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:id="@+id/v_search_upper_background_5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/fl_search_text_field"
+            app:layout_constraintEnd_toStartOf="@id/v_search_upper_background_6"
+            app:layout_constraintStart_toEndOf="@id/v_search_upper_background_4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/v_search_upper_background_6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/isbn"
+            app:layout_constraintBottom_toTopOf="@id/fl_search_text_field"
+            app:layout_constraintEnd_toStartOf="@id/v_search_upper_background_7"
+            app:layout_constraintStart_toEndOf="@id/v_search_upper_background_5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/Widget.App.TextView.SearchBarTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="S"
+            app:layout_constraintBottom_toBottomOf="@id/v_search_upper_background_6"
+            app:layout_constraintEnd_toEndOf="@id/v_search_upper_background_6"
+            app:layout_constraintStart_toStartOf="@id/v_search_upper_background_6"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:id="@+id/v_search_upper_background_7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/fl_search_text_field"
+            app:layout_constraintEnd_toStartOf="@id/v_search_upper_background_8"
+            app:layout_constraintStart_toEndOf="@id/v_search_upper_background_6"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/Widget.App.TextView.SearchBarTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="e"
+            app:layout_constraintBottom_toBottomOf="@id/v_search_upper_background_7"
+            app:layout_constraintEnd_toEndOf="@id/v_search_upper_background_7"
+            app:layout_constraintStart_toStartOf="@id/v_search_upper_background_7"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:id="@+id/v_search_upper_background_8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/isbn"
+            app:layout_constraintBottom_toTopOf="@id/fl_search_text_field"
+            app:layout_constraintEnd_toStartOf="@id/v_search_upper_background_9"
+            app:layout_constraintStart_toEndOf="@id/v_search_upper_background_7"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/Widget.App.TextView.SearchBarTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="a"
+            app:layout_constraintBottom_toBottomOf="@id/v_search_upper_background_8"
+            app:layout_constraintEnd_toEndOf="@id/v_search_upper_background_8"
+            app:layout_constraintStart_toStartOf="@id/v_search_upper_background_8"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:id="@+id/v_search_upper_background_9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/fl_search_text_field"
+            app:layout_constraintEnd_toStartOf="@id/v_search_upper_background_10"
+            app:layout_constraintStart_toEndOf="@id/v_search_upper_background_8"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/Widget.App.TextView.SearchBarTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="r"
+            app:layout_constraintBottom_toBottomOf="@id/v_search_upper_background_9"
+            app:layout_constraintEnd_toEndOf="@id/v_search_upper_background_9"
+            app:layout_constraintStart_toStartOf="@id/v_search_upper_background_9"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:id="@+id/v_search_upper_background_10"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/isbn"
+            app:layout_constraintBottom_toTopOf="@id/fl_search_text_field"
+            app:layout_constraintEnd_toStartOf="@id/v_search_upper_background_11"
+            app:layout_constraintStart_toEndOf="@id/v_search_upper_background_9"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/Widget.App.TextView.SearchBarTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="c"
+            app:layout_constraintBottom_toBottomOf="@id/v_search_upper_background_10"
+            app:layout_constraintEnd_toEndOf="@id/v_search_upper_background_10"
+            app:layout_constraintStart_toStartOf="@id/v_search_upper_background_10"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:id="@+id/v_search_upper_background_11"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/fl_search_text_field"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/v_search_upper_background_10"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/Widget.App.TextView.SearchBarTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="h"
+            app:layout_constraintBottom_toBottomOf="@id/v_search_upper_background_11"
+            app:layout_constraintEnd_toEndOf="@id/v_search_upper_background_11"
+            app:layout_constraintStart_toStartOf="@id/v_search_upper_background_11"
+            tools:ignore="HardcodedText" />
+
+        <FrameLayout
+            android:id="@+id/fl_search_text_field"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/height_text_field_large"
+            app:layout_constraintBottom_toTopOf="@id/v_search_lower_background_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_search_upper_background_1">
+
+            <com.google.android.material.search.SearchBar
+                android:id="@+id/search_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_text_field_large"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/home_search_bar_cd"
+                android:hint="@string/home_search_bar_hint"
+                android:labelFor="@id/et_search"
+                app:elevation="0dp"
+                app:menu="@menu/home_search_menu"
+                tools:ignore="ContentDescription" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="@dimen/size_largest"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_larger"
+                android:inputType="number"
+                android:maxLength="13"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <View
+            android:id="@+id/v_search_lower_background_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/v_search_lower_background_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fl_search_text_field"
+            app:layout_constraintVertical_weight="2" />
+
+        <View
+            android:id="@+id/v_search_lower_background_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/isbn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/v_search_lower_background_3"
+            app:layout_constraintStart_toEndOf="@id/v_search_lower_background_1"
+            app:layout_constraintTop_toBottomOf="@id/fl_search_text_field" />
+
+        <View
+            android:id="@+id/v_search_lower_background_3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/v_search_lower_background_4"
+            app:layout_constraintStart_toEndOf="@id/v_search_lower_background_2"
+            app:layout_constraintTop_toBottomOf="@id/fl_search_text_field" />
+
+        <View
+            android:id="@+id/v_search_lower_background_4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/isbn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/v_search_lower_background_5"
+            app:layout_constraintStart_toEndOf="@id/v_search_lower_background_3"
+            app:layout_constraintTop_toBottomOf="@id/fl_search_text_field" />
+
+        <View
+            android:id="@+id/v_search_lower_background_5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/v_search_lower_background_6"
+            app:layout_constraintStart_toEndOf="@id/v_search_lower_background_4"
+            app:layout_constraintTop_toBottomOf="@id/fl_search_text_field" />
+
+        <View
+            android:id="@+id/v_search_lower_background_6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/isbn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/v_search_lower_background_7"
+            app:layout_constraintStart_toEndOf="@id/v_search_lower_background_5"
+            app:layout_constraintTop_toBottomOf="@id/fl_search_text_field" />
+
+        <View
+            android:id="@+id/v_search_lower_background_7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/v_search_lower_background_8"
+            app:layout_constraintStart_toEndOf="@id/v_search_lower_background_6"
+            app:layout_constraintTop_toBottomOf="@id/fl_search_text_field" />
+
+        <View
+            android:id="@+id/v_search_lower_background_8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/isbn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/v_search_lower_background_9"
+            app:layout_constraintStart_toEndOf="@id/v_search_lower_background_7"
+            app:layout_constraintTop_toBottomOf="@id/fl_search_text_field" />
+
+        <View
+            android:id="@+id/v_search_lower_background_9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/v_search_lower_background_10"
+            app:layout_constraintStart_toEndOf="@id/v_search_lower_background_8"
+            app:layout_constraintTop_toBottomOf="@id/fl_search_text_field" />
+
+        <View
+            android:id="@+id/v_search_lower_background_10"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/isbn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/v_search_lower_background_11"
+            app:layout_constraintStart_toEndOf="@id/v_search_lower_background_9"
+            app:layout_constraintTop_toBottomOf="@id/fl_search_text_field" />
+
+        <View
+            android:id="@+id/v_search_lower_background_11"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/v_search_lower_background_10"
+            app:layout_constraintTop_toBottomOf="@id/fl_search_text_field" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/isbn"
+        app:layout_constraintBottom_toBottomOf="@id/cl_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cl_search"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

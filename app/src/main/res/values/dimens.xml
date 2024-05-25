@@ -2,7 +2,9 @@
 <resources>
     <!--  Layout related dimensions.  -->
         <!--  Sizes  -->
+    <dimen name="size_largest">256dp</dimen>
     <dimen name="size_larger">128dp</dimen>
+    <dimen name="size_large">64dp</dimen>
     <dimen name="size_medium">32dp</dimen>
         <!--  Margins  -->
     <dimen name="margin_largest">64dp</dimen>
@@ -17,6 +19,7 @@
     <dimen name="padding_medium">32dp</dimen>
     <dimen name="padding_small">16dp</dimen>
         <!--  App bar  -->
+    <dimen name="height_app_bar_large">136.5dp</dimen>
     <dimen name="padding_app_bar_large">16dp</dimen>
     <dimen name="padding_app_bar_medium">4dp</dimen>
     <dimen name="padding_app_bar_small">2dp</dimen>

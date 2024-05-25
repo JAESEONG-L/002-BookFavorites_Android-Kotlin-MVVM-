@@ -6,6 +6,12 @@
     <string name="main_home">Home</string>
     <string name="main_bookshelf">Bookshelf</string>
     <string name="main_info">Info</string>
+    <!--  Home fragment  -->
+        <!--  Search  -->
+    <string name="home_search_bar_cd">Please input your book\'s ISBN-13 at the labeled text field.</string>
+    <string name="home_search_bar_hint">Input your ISBN-13 code.</string>
+    <string name="home_search_item_title">Search</string>
+    <string name="home_search_item_cd">Search action.</string>
     <!--  About The Book fragment  -->
         <!--  Top app bar  -->
     <string name="about_the_book_app_bar_title">ABOUT</string>
