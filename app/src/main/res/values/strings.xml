@@ -12,6 +12,12 @@
     <string name="home_search_bar_hint">Input your ISBN-13 code.</string>
     <string name="home_search_item_title">Search</string>
     <string name="home_search_item_cd">Search action.</string>
+        <!--  Title  -->
+    <string name="home_recent_favorites_title">Recent Favorites</string>
+        <!--  Body  -->
+    <string name="home_iv_title_image_cd">This is a title image of the book.</string>
+    <string name="home_isbn_label">ISBN:</string>
+    <string name="home_added_date_label">Added on</string>
     <!--  About The Book fragment  -->
         <!--  Top app bar  -->
     <string name="about_the_book_app_bar_title">ABOUT</string>

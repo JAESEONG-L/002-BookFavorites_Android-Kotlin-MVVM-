@@ -43,6 +43,7 @@
     <dimen name="size_drawable_small">24.5dp</dimen>
 
     <!--  Text related dimensions.  -->
+    <dimen name="lineheight_large">22.3sp</dimen>
     <dimen name="lineheight_medium">21.5sp</dimen>
     <dimen name="lineheight_small">15sp</dimen>
     <dimen name="textsize_larger">20sp</dimen>

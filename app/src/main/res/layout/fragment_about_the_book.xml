@@ -43,7 +43,7 @@
                 app:navigationIcon="@drawable/ic_navigation_bookshelf_filled"
                 app:navigationIconTint="?attr/colorControlNormal"
                 app:title="@string/about_the_book_group_label"
-                app:titleTextAppearance="@style/TextAppearance.App.Toolbar.Label">
+                app:titleTextAppearance="@style/TextAppearance.App.Widget.Toolbar.Label">
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/til_group"

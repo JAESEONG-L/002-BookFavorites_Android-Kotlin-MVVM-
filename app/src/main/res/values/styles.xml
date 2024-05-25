@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--  Home fragment  -->
+    <style name="Widget.App.TextView" parent="Widget.AppCompat.TextView" />
+
+    <style name="Widget.App.TextView.SearchBarTitle" parent="TextAppearance.App.BodyLarge">
+        <item name="android:paddingBottom">@dimen/padding_small</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/gray_bg</item>
+    </style>
+
+    <style name="ShapeAppearance.App.Corner.Small" parent="ShapeAppearance.Material3.Corner.ExtraSmall" />
+
+
     <!--  About The Book fragment  -->
     <style name="Widget.App.CardView.NotePreview" parent="Widget.Material3.CardView.Elevated">
         <item name="android:layout_marginTop">@dimen/margin_larger</item>
@@ -8,13 +21,6 @@
         <item name="cardCornerRadius">0dp</item>
     </style>
 
-    <style name="Widget.App.TextView" parent="Widget.AppCompat.TextView" />
-    <style name="Widget.App.TextView.SearchBarTitle" parent="TextAppearance.App.BodyLarge">
-        <item name="android:paddingBottom">@dimen/padding_small</item>
-        <item name="android:textAlignment">center</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/gray_bg</item>
-    </style>
     <style name="Widget.App.TextView.NotePreview" parent="TextAppearance.App.BodySmall">
         <item name="android:paddingHorizontal">@dimen/padding_text_field_largest</item>
         <item name="android:elevation">@dimen/default_elevation_material_card_view</item>
@@ -45,6 +51,11 @@
         <item name="android:textSize">@dimen/textsize_larger</item>
         <item name="android:textStyle">bold</item>
     </style>
+    <style name="TextAppearance.App.TitleMedium" parent="TextAppearance.App.TitleLarge">
+        <item name="android:lineHeight">@dimen/lineheight_large</item>
+        <item name="lineHeight">@dimen/lineheight_large</item>
+        <item name="android:textSize">@dimen/textsize_large</item>
+    </style>
     <style name="TextAppearance.App.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
         <item name="android:textSize">@dimen/textsize_large</item>
     </style>
@@ -61,15 +72,19 @@
         <item name="lineHeight">@dimen/lineheight_small</item>
         <item name="android:textSize">@dimen/textsize_small</item>
     </style>
+
+        <!--  Widget Text Appearance  -->
+    <style name="TextAppearance.App.Widget" />
+
+    <style name="TextAppearance.App.Widget.Toolbar" />
+
+    <style name="TextAppearance.App.Widget.Toolbar.Label" parent="TextAppearance.Material3.ActionBar.Title">
+        <item name="android:textSize">@dimen/textsize_large</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="TextAppearance.App.Widget.Button" parent="TextAppearance.Material3.LabelLarge">
         <item name="android:textSize">17sp</item>
     </style>
 
-        <!--  Widget Text Appearance  -->
-    <style name="TextAppearance.App.Toolbar" />
-
-    <style name="TextAppearance.App.Toolbar.Label" parent="TextAppearance.Material3.ActionBar.Title">
-        <item name="android:textSize">@dimen/textsize_large</item>
-        <item name="android:textStyle">bold</item>
-    </style>
 </resources>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_small"
+    tools:viewBindingIgnore="true">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_horizontal_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_vertical_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.70588" />
+
+    <!--  Background view.  -->
+    <View
+        android:id="@+id/v_background"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/size_larger"
+        android:background="@drawable/shape_home_recent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_title_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:contentDescription="@string/home_iv_title_image_cd"
+        app:layout_constraintBottom_toBottomOf="@id/v_background"
+        app:layout_constraintDimensionRatio="W,4:5"
+        app:layout_constraintStart_toStartOf="@id/v_background"
+        app:layout_constraintTop_toTopOf="@id/v_background"
+        app:shapeAppearance="@style/ShapeAppearance.App.Corner.Small" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:ellipsize="marquee"
+        android:maxLines="3"
+        android:textAppearance="@style/TextAppearance.App.TitleMedium"
+        app:layout_constraintEnd_toStartOf="@id/gl_vertical_1"
+        app:layout_constraintStart_toEndOf="@id/iv_title_image"
+        app:layout_constraintTop_toTopOf="@id/iv_title_image" />
+
+    <TextView
+        android:id="@+id/tv_isbn_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/tv_isbn"
+        android:text="@string/home_isbn_label"
+        android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+        app:layout_constraintBottom_toBottomOf="@id/iv_title_image"
+        app:layout_constraintStart_toStartOf="@id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_isbn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_smallest"
+        android:textAppearance="@style/TextAppearance.App.BodyMedium.Item"
+        app:layout_constraintBottom_toBottomOf="@id/tv_isbn_label"
+        app:layout_constraintStart_toEndOf="@id/tv_isbn_label" />
+
+    <!--  Background view.  -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_label"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="@color/star"
+        app:cardCornerRadius="@dimen/corner_radius_card_view_small"
+        app:layout_constraintBottom_toBottomOf="@id/v_background"
+        app:layout_constraintEnd_toEndOf="@id/v_background"
+        app:layout_constraintStart_toEndOf="@id/gl_vertical_1"
+        app:layout_constraintTop_toTopOf="@id/v_background" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:elevation="@dimen/cardview_default_elevation"
+        android:labelFor="@id/tv_added_date"
+        android:maxLines="1"
+        android:text="@string/home_added_date_label"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.App.TitleMedium"
+        app:layout_constraintBottom_toTopOf="@id/gl_horizontal_1"
+        app:layout_constraintEnd_toEndOf="@id/cv_label"
+        app:layout_constraintStart_toStartOf="@id/cv_label"
+        app:layout_constraintTop_toTopOf="@id/cv_label" />
+
+    <TextView
+        android:id="@+id/tv_added_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:elevation="@dimen/cardview_default_elevation"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.App.TitleMedium"
+        app:layout_constraintBottom_toBottomOf="@id/cv_label"
+        app:layout_constraintEnd_toEndOf="@id/cv_label"
+        app:layout_constraintStart_toStartOf="@id/cv_label"
+        app:layout_constraintTop_toBottomOf="@id/gl_horizontal_1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

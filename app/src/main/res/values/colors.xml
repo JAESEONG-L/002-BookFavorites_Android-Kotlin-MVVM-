@@ -4,6 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="lumber">#3F2305</color>
     <color name="isbn">#272343</color>
+    <color name="star">#FFC107</color>
 
     <!--  Baseline  -->
     <color name="surface">#FEF7FF</color>
