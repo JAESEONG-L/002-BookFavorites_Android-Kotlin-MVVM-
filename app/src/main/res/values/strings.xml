@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">BookFavorites</string>
-    
+
     <string name="all_back_navigation_cd">Back</string>
     <!--  Navigation bar  -->
     <string name="main_home">Home</string>
@@ -15,7 +15,7 @@
         <!--  Title  -->
     <string name="home_recent_favorites_title">Recent Favorites</string>
         <!--  Body  -->
-    <string name="home_iv_title_image_cd">This is a title image of the book.</string>
+    <string name="home_iv_title_image_cd">Title image of the book.</string>
     <string name="home_isbn_label">ISBN:</string>
     <string name="home_added_date_label">Added on</string>
     <!--  About The Book fragment  -->
@@ -27,11 +27,16 @@
     <string name="about_the_book_note_item_cd">Note action.</string>
     <string name="about_the_book_group_label">Group:</string>
         <!--  Title  -->
-    <string name="about_the_book_iv_title_image_cd">This is a title image of the book.</string>
+    <string name="about_the_book_iv_title_image_cd">Title image of the book.</string>
         <!--  Body  -->
     <string name="about_the_book_predate_label">(Pre) Date</string>
-    <string name="about_the_book_table_of_contents_hint">TABLE OF CONTENTS</string>
-    <string name="about_the_book_iv_note_preview_cd">You can create a new note.</string>
+    <string name="about_the_book_til_table_of_contents_cd">Layout widget for the exposed dropdown menu of a table of contents.</string>
+    <string name="about_the_book_til_table_of_contents_hint">TABLE OF CONTENTS</string>
+    <string name="about_the_book_cv_note_preview_cd">Background widget for a note preview area. Click this widget to create a note or change the note.</string>
+    <string name="about_the_book_iv_note_preview_1_cd">You can create a new note at area #1.</string>
+    <string name="about_the_book_iv_note_preview_2_cd">You can create a new note at area #2.</string>
+    <string name="about_the_book_iv_note_preview_3_cd">You can create a new note at area #3.</string>
+    <string name="about_the_book_iv_note_preview_4_cd">You can create a new note at area #4.</string>
     <string name="about_the_book_favorites_label">Favorites:</string>
     <string name="about_the_book_edition_label">Edition:</string>
     <string name="about_the_book_btn_add_to_reading_label">Add To Reading</string>
