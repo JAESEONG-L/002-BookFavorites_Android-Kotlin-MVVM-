@@ -2,34 +2,28 @@ package com.koreandroid.bookfavorites.ui.home
 
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 
-class HomeViewModel(
-    private val onCreateCallback: (String) -> Unit
-) : ViewModel(), DefaultLifecycleObserver {
+class HomeViewModel : ViewModel(), DefaultLifecycleObserver {
 
-    var searchText: String = ""
+    private val _searchText = MutableLiveData<String>()
+    val searchText: LiveData<String> = _searchText
+
+    init {
+        _searchText.value = ""
+    }
 
     override fun onCreate(owner: LifecycleOwner) {
         clearSearchText()
-
-        onCreateCallback(searchText)
     }
 
-    private fun clearSearchText() {
-        searchText = ""
+    fun setSearchText(text: String) {
+        _searchText.value = text
     }
 
-    companion object {
-
-        fun provideFactory(onCreateCallback: (String) -> Unit): ViewModelProvider.Factory =
-            object : ViewModelProvider.Factory {
-
-                @Suppress("UNCHECKED_CAST")
-                override fun <T : ViewModel> create(modelClass: Class<T>): T {
-                    return HomeViewModel(onCreateCallback) as T
-                }
-            }
+    fun clearSearchText() {
+        setSearchText("")
     }
 }

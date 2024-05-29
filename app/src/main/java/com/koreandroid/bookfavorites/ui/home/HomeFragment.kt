@@ -21,12 +21,12 @@ import com.koreandroid.bookfavorites.util.showSoftKeyboard
 
 class HomeFragment : Fragment() {
 
-    private val viewModel: HomeViewModel by viewModels {
-        HomeViewModel.provideFactory(::initializeViewState)
-    }
+    private val viewModel: HomeViewModel by viewModels()
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+
+    private var isViewRecreated: Boolean = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,7 +38,7 @@ class HomeFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        viewLifecycleOwner.lifecycle.addObserver(viewModel)
+        if (isViewRecreated) viewLifecycleOwner.lifecycle.addObserver(viewModel)
 
         super.onViewCreated(view, savedInstanceState)
 
@@ -51,15 +51,19 @@ class HomeFragment : Fragment() {
         }
 
         binding.setupSearchTextField()
+
+        isViewRecreated = true
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        if (binding.etSearch.text.isNotEmpty()) binding.searchBar.callOnClick()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    private fun initializeViewState(searchText: String) {
-        binding.etSearch.setText(searchText)
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")
@@ -88,8 +92,12 @@ class HomeFragment : Fragment() {
         }
 
         etSearch.run {
+            viewModel.searchText.observe(viewLifecycleOwner) {
+                if (it != text.toString()) setText(it)
+            }
+
             doOnTextChanged { text, _, _, _ ->
-                viewModel.searchText = text?.toString() ?: ""
+                viewModel.setSearchText(text?.toString() ?: "")
             }
 
             setOnFocusChangeListener { _, hasFocus ->
@@ -107,6 +115,8 @@ class HomeFragment : Fragment() {
                     searchBar.isClickable = true
                     searchBar.navigationIcon = defaultNavigationIcon
                     searchBar.hint = getString(R.string.home_search_bar_hint)
+
+                    viewModel.clearSearchText()
                 }
             }
         }
