@@ -14,7 +14,6 @@ import androidx.core.view.updatePadding
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.google.android.material.search.SearchBar
 import com.koreandroid.bookfavorites.R
 import com.koreandroid.bookfavorites.databinding.FragmentHomeBinding
 import com.koreandroid.bookfavorites.util.hideSoftKeyboard
@@ -68,43 +67,47 @@ class HomeFragment : Fragment() {
         val defaultNavigationIcon: Drawable? = searchBar.navigationIcon
         val searchItem: MenuItem = searchBar.menu.findItem(R.id.search)!!
 
-        searchBar.setOnClickListener {
-            if (etSearch.visibility == View.GONE) with(it as SearchBar) {
-                isClickable = false
-                navigationIcon = resources.getDrawable(R.drawable.shape_empty, null)
-                hint = null
+        searchBar.run {
+            setOnClickListener {
+                if (binding.etSearch.visibility == View.GONE) {
+                    isClickable = false
+                    navigationIcon = resources.getDrawable(R.drawable.shape_empty, null)
+                    hint = null
 
-                etSearch.visibility = View.VISIBLE
-                etSearch.showSoftKeyboard()
+                    etSearch.visibility = View.VISIBLE
+                    etSearch.showSoftKeyboard()
 
-                searchItem.isVisible = true
+                    searchItem.isVisible = true
 
-                clSearch.updateLayoutParams {
-                    height = resources.getDimension(R.dimen.height_app_bar_large)
-                        .toInt()
+                    clSearch.updateLayoutParams {
+                        height = resources.getDimension(R.dimen.height_app_bar_large)
+                            .toInt()
+                    }
                 }
             }
         }
 
-        etSearch.doOnTextChanged { text, _, _, _ ->
-            viewModel.searchText = text?.toString() ?: ""
-        }
+        etSearch.run {
+            doOnTextChanged { text, _, _, _ ->
+                viewModel.searchText = text?.toString() ?: ""
+            }
 
-        etSearch.setOnFocusChangeListener { v, hasFocus ->
-            if (!hasFocus) {
-                clSearch.updateLayoutParams {
-                    height = resources.getDimension(R.dimen.size_large)
-                        .toInt()
+            setOnFocusChangeListener { _, hasFocus ->
+                if (!hasFocus) {
+                    clSearch.updateLayoutParams {
+                        height = resources.getDimension(R.dimen.size_large)
+                            .toInt()
+                    }
+
+                    searchItem.isVisible = false
+
+                    visibility = View.GONE
+                    hideSoftKeyboard()
+
+                    searchBar.isClickable = true
+                    searchBar.navigationIcon = defaultNavigationIcon
+                    searchBar.hint = getString(R.string.home_search_bar_hint)
                 }
-
-                searchItem.isVisible = false
-
-                v.visibility = View.GONE
-                v.hideSoftKeyboard()
-
-                searchBar.isClickable = true
-                searchBar.navigationIcon = defaultNavigationIcon
-                searchBar.hint = getString(R.string.home_search_bar_hint)
             }
         }
     }
