@@ -11,12 +11,16 @@ class HomeViewModel : ViewModel(), DefaultLifecycleObserver {
     private val _searchText = MutableLiveData<String>()
     val searchText: LiveData<String> = _searchText
 
+    private var isHomeFragmentViewRecreated: Boolean? = null
+
     init {
         _searchText.value = ""
     }
 
     override fun onCreate(owner: LifecycleOwner) {
-        clearSearchText()
+        if (isHomeFragmentViewRecreated!!) {
+            clearSearchText()
+        }
     }
 
     fun setSearchText(text: String) {
@@ -25,5 +29,15 @@ class HomeViewModel : ViewModel(), DefaultLifecycleObserver {
 
     fun clearSearchText() {
         setSearchText("")
+    }
+
+    fun updateIsHomeFragmentViewRecreated() {
+        isHomeFragmentViewRecreated = isHomeFragmentViewRecreated?.let {
+            true
+        } ?: false
+    }
+
+    fun clearIsHomeFragmentViewRecreated() {
+        isHomeFragmentViewRecreated = null
     }
 }

@@ -26,8 +26,6 @@ class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
-    private var isViewRecreated: Boolean = false
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -38,7 +36,8 @@ class HomeFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        if (isViewRecreated) viewLifecycleOwner.lifecycle.addObserver(viewModel)
+        // Adding viewModel as a LifecycleObserver for the View Lifecycle.
+        viewLifecycleOwner.lifecycle.addObserver(viewModel)
 
         super.onViewCreated(view, savedInstanceState)
 
@@ -52,7 +51,7 @@ class HomeFragment : Fragment() {
 
         binding.setupSearchTextField()
 
-        isViewRecreated = true
+        viewModel.updateIsHomeFragmentViewRecreated()
     }
 
     override fun onResume() {
@@ -62,32 +61,24 @@ class HomeFragment : Fragment() {
     }
 
     override fun onDestroyView() {
-        super.onDestroyView()
         _binding = null
+
+        super.onDestroyView()
     }
 
-    @SuppressLint("UseCompatLoadingForDrawables")
+    override fun onDestroy() {
+        viewModel.clearIsHomeFragmentViewRecreated()
+
+        super.onDestroy()
+    }
+
     private fun FragmentHomeBinding.setupSearchTextField() {
         val defaultNavigationIcon: Drawable? = searchBar.navigationIcon
         val searchItem: MenuItem = searchBar.menu.findItem(R.id.search)!!
 
         searchBar.run {
             setOnClickListener {
-                if (binding.etSearch.visibility == View.GONE) {
-                    isClickable = false
-                    navigationIcon = resources.getDrawable(R.drawable.shape_empty, null)
-                    hint = null
-
-                    etSearch.visibility = View.VISIBLE
-                    etSearch.showSoftKeyboard()
-
-                    searchItem.isVisible = true
-
-                    clSearch.updateLayoutParams {
-                        height = resources.getDimension(R.dimen.height_app_bar_large)
-                            .toInt()
-                    }
-                }
+                if (showSearchTextField()) searchItem.isVisible = true
             }
         }
 
@@ -101,23 +92,51 @@ class HomeFragment : Fragment() {
             }
 
             setOnFocusChangeListener { _, hasFocus ->
-                if (!hasFocus) {
-                    clSearch.updateLayoutParams {
-                        height = resources.getDimension(R.dimen.size_large)
-                            .toInt()
-                    }
+                if (hasFocus) return@setOnFocusChangeListener
 
-                    searchItem.isVisible = false
+                searchItem.isVisible = false
+                hideSearchTextField()
+                searchBar.navigationIcon = defaultNavigationIcon
 
-                    visibility = View.GONE
-                    hideSoftKeyboard()
+                viewModel.clearSearchText()
+            }
+        }
+    }
 
-                    searchBar.isClickable = true
-                    searchBar.navigationIcon = defaultNavigationIcon
-                    searchBar.hint = getString(R.string.home_search_bar_hint)
+    @SuppressLint("UseCompatLoadingForDrawables")
+    private fun showSearchTextField(): Boolean = binding.etSearch.run {
+        if (visibility == View.GONE) {
+            with(binding.searchBar) {
+                isClickable = false
+                navigationIcon = resources.getDrawable(R.drawable.shape_empty, null)
+                hint = null
+            }
 
-                    viewModel.clearSearchText()
-                }
+            visibility = View.VISIBLE
+            showSoftKeyboard()
+
+            binding.clSearch.updateLayoutParams {
+                height = resources.getDimension(R.dimen.height_app_bar_large)
+                    .toInt()
+            }
+
+            true
+        } else false
+    }
+
+    private fun hideSearchTextField() {
+        binding.etSearch.run {
+            binding.clSearch.updateLayoutParams {
+                height = resources.getDimension(R.dimen.size_large)
+                    .toInt()
+            }
+
+            visibility = View.GONE
+            hideSoftKeyboard()
+
+            with(binding.searchBar) {
+                isClickable = true
+                hint = getString(R.string.home_search_bar_hint)
             }
         }
     }
