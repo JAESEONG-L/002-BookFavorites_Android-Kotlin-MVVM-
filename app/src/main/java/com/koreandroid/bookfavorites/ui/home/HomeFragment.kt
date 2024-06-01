@@ -14,17 +14,27 @@ import androidx.core.view.updatePadding
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.navGraphViewModels
 import com.koreandroid.bookfavorites.R
 import com.koreandroid.bookfavorites.databinding.FragmentHomeBinding
+import com.koreandroid.bookfavorites.ui.shared.MobileNavigationViewModel
 import com.koreandroid.bookfavorites.util.hideSoftKeyboard
 import com.koreandroid.bookfavorites.util.showSoftKeyboard
 
 class HomeFragment : Fragment() {
 
+    private val navigationViewModel: MobileNavigationViewModel by navGraphViewModels(R.id.mobile_navigation)
+
     private val viewModel: HomeViewModel by viewModels()
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        navigationViewModel // Pre-instantiates repositories.
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
